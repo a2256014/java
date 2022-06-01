@@ -1,0 +1,11 @@
+import java.util.*;
+public class problem {
+    public static void main(String[] args){
+        type result = solution();
+        System.out.println(result);
+    }
+    public static type solution(){
+        int[] answer = {};
+        return answer;
+    }
+}
