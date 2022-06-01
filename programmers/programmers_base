@@ -2,7 +2,7 @@ import java.util.*;
 public class problem {
     public static void main(String[] args){
         type result = solution();
-        System.out.println(result);
+        System.out.println(Arrays.toString(result));
     }
     public static type solution(){
         int[] answer = {};
