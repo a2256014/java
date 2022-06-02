@@ -1,4 +1,5 @@
-import java.util.Objects;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class bookStudy {
     public static void main(String [] args){
@@ -27,6 +28,14 @@ public class bookStudy {
         System.out.println(car2.equals(car3));
         System.out.println(car2.hashCode());
         System.out.println(car3.hashCode());
+
+        String [] a = {};
+        Integer [] b={};
+        int [] c={};
+        ArrayList<String>alist= new ArrayList<>(Arrays.asList(a));
+        ArrayList<Integer>blist = new ArrayList<>(Arrays.asList(b));
+        HashSet<String>clist = new HashSet<>(alist);
+
     }
     static void add(String ...arg){
         for(Object str : arg) {
