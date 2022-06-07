@@ -1,5 +1,7 @@
 import java.util.*;
-
+import java.util.stream.IntStream;
+//예산
+/*
 public class Step_1_3 {
     public static void main(String[] args){
         int result = solution(new int[] {120, 110, 140, 150},485);
@@ -21,7 +23,7 @@ public class Step_1_3 {
         /*
             상한액 = x
             상한액보다 작은 예산 + (상한액*남은 지방) <=M
-        */
+        * /
         int front = 0;
         int rear = M;
         while(front<=rear){
@@ -46,6 +48,7 @@ public class Step_1_3 {
         return sum;
     }
 }
+*/
 
 /*
 import java.util.*;
@@ -99,3 +102,32 @@ class Solution {
     Arrays.stream 속도가 느림
     budgetSum을 활용해서 구하니 테스트테이스2번 속도 23ms -> 19ms 빨라짐
 */
+//예산
+public class Step_1_3 {
+    public static void main(String[] args) {
+        int result = solution(new int[]{120, 110, 140, 150}, 485);
+        System.out.println(result);
+    }
+
+    static int solution(int[] budgets, int M) {
+        int min = 0;
+        int max = IntStream.of(budgets)
+                .max()
+                .orElse(0);
+
+        int answer = 0;
+        while (min <= max) {
+            final int mid = (min + max) / 2;
+
+            int sum = IntStream.of(budgets)
+                    .map(x -> Math.min(x, mid))
+                    .sum();
+
+            if (sum <= M) {
+                min = mid + 1;
+                answer = mid;
+            } else max = mid - 1;
+        }
+        return answer;
+    }
+}

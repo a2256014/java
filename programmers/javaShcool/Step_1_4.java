@@ -1,5 +1,8 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
+//숫자게임
+/*
 public class Step_1_4 {
     public static void main(String[] args){
         int result = solution(new int []{5,1,3,7},new int[] {2,2,6,8});
@@ -32,5 +35,24 @@ public class Step_1_4 {
         }
 
         return min;
+    }
+}
+*/
+public class Step_1_4 {
+    public static void main(String[] args) {
+        int result = solution(new int[]{5, 1, 3, 7}, new int[]{2, 2, 6, 8});
+        System.out.println(result);
+    }
+
+    static int solution(int[] A, int[] B) {
+        Arrays.sort(A);
+        Arrays.sort(B);
+        int Aindex = 0;
+
+        for (int b : B) {
+            if (b <= A[Aindex]) continue;
+            Aindex++;
+        }
+        return Aindex;
     }
 }
