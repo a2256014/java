@@ -58,6 +58,7 @@ class Car implements Repairable {
     final String num;
 
     {
+        count++;
         color = "white";
         num = count + "";
     }
