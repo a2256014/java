@@ -7,6 +7,12 @@
       <sourceFolder url="file://$MODULE_DIR$/programmers/javaShcool" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/study" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/fastCampus" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/fastCampus/ch13/domain userInfo" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/fastCampus/ch13/domain userInfo/dao" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/fastCampus/ch13/domain userInfo/dao/mysql" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/fastCampus/ch13/domain userInfo/dao/oracle" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/fastCampus/ch13/userInfo web" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
