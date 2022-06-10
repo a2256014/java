@@ -13,7 +13,7 @@ public class stringZip {
             for (int index = step; index <= s.length()-step; index += step) {
                 String prevString = s.substring(index-step,index);
                 String curString = s.substring(index,index+step);
-                boolean equals = prevString.toString().equals(curString.toString());
+                boolean equals = prevString.equals(curString);
 
                 if(equals) count++;
                 else{
@@ -30,11 +30,11 @@ public class stringZip {
                 }
 
                 else if(index+2*step > s.length()){
-                    String rest = s.substring(index+step,s.length());
+                    String rest = s.substring(index+step);
                     if(count==1) zip=zip.concat(curString+rest);
                     else zip=zip.concat(count+""+curString+rest);
                 }
-                System.out.println(step+" : "+zip.toString());
+                System.out.println(step+" : "+ zip);
             }
             if(zip.length()==0) zip =s;
             answer = Math.min(answer,zip.length());

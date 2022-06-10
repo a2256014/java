@@ -1,7 +1,7 @@
 package dataStructure;
 
 class MyNode{
-    private String data;
+    private final String data;
     public MyNode next;
 
     public MyNode(){

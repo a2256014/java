@@ -3,7 +3,7 @@ package ch16.scheduler;
 import java.io.IOException;
 
 public class Test {
-    public static void main(String[] args) throws IOException, IOException {
+    public static void main(String[] args) throws IOException {
 
         System.out.println("전화 상담원 할당 방식을 선택하세요");
         System.out.println("R : 한명씩 차례대로");

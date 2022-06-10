@@ -39,7 +39,7 @@ public class practice {
         s2.number = "1234";
         System.out.println(s1.equals(s2));
         System.out.println(s1.hashCode()+","+s2.hashCode());
-        System.out.println(s1.toString());
+        System.out.println(s1);
 
         class Box<E>{
             private E obj;

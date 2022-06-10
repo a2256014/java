@@ -2,7 +2,7 @@ import java.util.*;
 
 public class idRecommend {
     public static void main(String[] args) {
-        String result = solution(new String("...!@BaT#*..y.abcdefghijklm"));
+        String result = solution("...!@BaT#*..y.abcdefghijklm");
         System.out.println(result);
     }
 

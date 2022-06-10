@@ -1,0 +1,32 @@
+6월 10, 2022 2:16:39 오후 ch19.MyLogger log
+FINEST: test
+6월 10, 2022 2:16:39 오후 ch19.MyLogger log
+FINER: test
+6월 10, 2022 2:16:39 오후 ch19.MyLogger log
+FINE: test
+6월 10, 2022 2:16:39 오후 ch19.MyLogger log
+CONFIG: test
+6월 10, 2022 2:16:39 오후 ch19.MyLogger log
+INFO: test
+6월 10, 2022 2:16:39 오후 ch19.MyLogger log
+WARNING: test
+6월 10, 2022 2:16:39 오후 ch19.MyLogger log
+SEVERE: test
+6월 10, 2022 2:17:50 오후 ch19.MyLogger warning
+WARNING: name must not be null
+6월 10, 2022 2:17:50 오후 ch19.MyLogger warning
+WARNING: 이름이 너무 길어요
+6월 10, 2022 2:29:45 오후 ch19.MyLogger log
+FINEST: test
+6월 10, 2022 2:29:45 오후 ch19.MyLogger log
+FINER: test
+6월 10, 2022 2:29:45 오후 ch19.MyLogger log
+FINE: test
+6월 10, 2022 2:29:45 오후 ch19.MyLogger log
+CONFIG: test
+6월 10, 2022 2:29:45 오후 ch19.MyLogger log
+INFO: test
+6월 10, 2022 2:29:45 오후 ch19.MyLogger log
+WARNING: test
+6월 10, 2022 2:29:45 오후 ch19.MyLogger log
+SEVERE: test

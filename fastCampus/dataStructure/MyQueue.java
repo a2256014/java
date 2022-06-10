@@ -1,7 +1,7 @@
 package dataStructure;
 interface Queue{
-    public void enQueue(String data);
-    public String deQueue();
+    void enQueue(String data);
+    String deQueue();
 }
 public class MyQueue extends MyLinkedList implements Queue{
     MyNode front;
@@ -9,7 +9,7 @@ public class MyQueue extends MyLinkedList implements Queue{
 
     @Override
     public void enQueue(String data) {
-        MyNode newNode = addElement(data);;
+        MyNode newNode = addElement(data);
         if(isEmpty()) {
             front = newNode;
             rear = newNode;

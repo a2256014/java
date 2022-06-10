@@ -98,6 +98,6 @@ public class Mid_Test2 {
             customer[1] -= 60;
             customer[0] += 1;
         }
-        return Integer.toString(customer[0]) + ":" + Integer.toString(customer[1]);
+        return customer[0] + ":" + customer[1];
     }
 }
