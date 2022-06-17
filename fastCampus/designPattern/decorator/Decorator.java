@@ -1,4 +1,4 @@
-package decoratorPattern;
+package designPattern.decorator;
 
 public abstract class Decorator extends Coffee{
     Coffee coffee;

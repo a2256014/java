@@ -1,4 +1,4 @@
-package decoratorPattern;
+package designPattern.decorator;
 
 public class Latte extends Decorator{
 
