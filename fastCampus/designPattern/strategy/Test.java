@@ -16,11 +16,10 @@ public class Test {
         String message = "hello java";
         encoder.setEncodingStrategy(base64);
         String base64Result = encoder.getMessage(message);
+        System.out.println("base64 : " + base64Result);
 
         encoder.setEncodingStrategy(normal);
         String normalResult = encoder.getMessage(message);
-
-        System.out.println("base64 : " + base64Result);
         System.out.println("normal : " + normalResult);
 
         encoder.setEncodingStrategy(new AppendStrategy());

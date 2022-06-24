@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+<module external.linked.project.id="java" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="JAVA" external.system.module.group="" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/out/production/java" />
+    <output-test url="file://$MODULE_DIR$/out/test/java" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/programmers" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/programmers/javaShcool" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/study" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TestCase" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/fastCampus" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />

@@ -1,4 +1,4 @@
-package designPattern.aop;
+package designPattern.proxy.aop;
 
 import designPattern.proxy.Html;
 import designPattern.proxy.IBrowser;
@@ -11,7 +11,7 @@ public class AopBrowser implements IBrowser {
     private Runnable before;
     private Runnable after;
 
-    public AopBrowser(String url, Runnable before, Runnable after){
+    public AopBrowser(String url, Runnable before, Runnable after) {
         this.url = url;
         this.before = before;
         this.after = after;
@@ -20,18 +20,18 @@ public class AopBrowser implements IBrowser {
     @Override
     public Html show() {
         before.run();
-        if(this.html == null){
+        if (this.html == null) {
             this.html = new Html(this.url);
-            System.out.println("AopBrowser html loading from : "+this.url);
+            System.out.println("AopBrowser html loading from : " + this.url);
             try {
                 Thread.sleep(1500);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
         }
+        else System.out.println("AopBrowser html cache : " + this.url);
 
         after.run();
-        System.out.println("AopBrowser html cache : " + this.url);
         return this.html;
     }
 }

@@ -1,4 +1,4 @@
-package designPattern.aop;
+package designPattern.proxy.aop;
 
 import designPattern.proxy.IBrowser;
 
