@@ -1,9 +1,8 @@
 package ch20;
 
-import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class In {
+public class In_p {
     public static void main(String[] args) {
         /*
         System.out.println("input");

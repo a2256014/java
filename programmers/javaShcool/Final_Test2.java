@@ -1,5 +1,6 @@
 import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.stream.IntStream;
 
 public class Final_Test2 {
     public static void main(String[] args) {
@@ -8,6 +9,74 @@ public class Final_Test2 {
     }
 
     static String[] solution(String[] s1, String[] s2, String k) {
+        Map<String, Set<String>> preCourseMap = preparePreCourse(s1, s2, k);
+        Queue<String> que = new PriorityQueue<>(new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                if (isPreCourse(preCourseMap, o1, o2)) {
+                    return 1;
+                }
+
+                return o2.compareTo(o1);
+            }
+        });
+
+        List<String> answer = new ArrayList<>();
+        que.add(k);
+        while (!que.isEmpty()) {
+            String temp = que.poll();
+            answer.add(temp);
+            if (preCourseMap.containsKey(temp)) {
+                for (String course : preCourseMap.get(temp)) {
+                    que.add(course);
+                }
+            }
+            System.out.println(que);
+        }
+        System.out.println(answer);
+        return null;
+    }
+
+    static Map<String, Set<String>> preparePreCourse(String[] s1, String[] s2, String k) {
+        Map<String, Set<String>> preCourseMap = new HashMap<>();
+        for (int i = 0; i < s2.length; i++) {
+            Set<String> temp = preCourseMap.getOrDefault(s2[i], new HashSet<>());
+            temp.add(s1[i]);
+            preCourseMap.put(s2[i], temp);
+        }
+
+        return preCourseMap;
+    }
+
+    static boolean isPreCourse(Map<String, Set<String>> preCourseMap, String a, String b) {
+        if (!preCourseMap.containsKey(b)) {
+            return false;
+        }
+
+        if (preCourseMap.get(b).contains(a)) {
+            return true;
+        }
+
+        for (String s : preCourseMap.get(b)) {
+            if (isPreCourse(preCourseMap, a, s)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    static String[] course(String k, Map<String, Set<String>> preCourse, Set<String> course) {
+        course.add(k);
+        if (preCourse.containsKey(k)) {
+            for (String pre : preCourse.get(k)) {
+                course(pre, preCourse, course);
+            }
+        }
+        return course.toArray(new String[course.size()]);
+    }
+
+    /*static String[] solution(String[] s1, String[] s2, String k) {
         String[] answer = {};
         String result = "";
         //수강가능한 목록중에서 알파벳 순으로 수강
@@ -65,5 +134,5 @@ public class Final_Test2 {
         result += k;
         answer = result.split("");
         return answer;
-    }
+    }*/
 }

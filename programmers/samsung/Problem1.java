@@ -18,12 +18,9 @@ public class Problem1 {
             int depth = input[0];
             int length = input[1];
             int days = input[2];
-            PriorityQueue<int[]> map = new PriorityQueue<>(new Comparator<int[]>() {
-                @Override
-                public int compare(int[] o1, int[] o2) {
-                    if (o1[1] == o2[1]) return o2[0] - o1[0];
-                    else return o1[1] - o2[1];
-                }
+            PriorityQueue<int[]> map = new PriorityQueue<>((o1, o2) -> {
+                if (o1[1] == o2[1]) return o2[0] - o1[0];
+                else return o1[1] - o2[1];
             });
 
             for (int j = 0; j < depth; j++) {

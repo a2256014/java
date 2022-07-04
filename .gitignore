@@ -71,7 +71,7 @@ fabric.properties
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
 
-!/programmers/javaShcool/상담예약제(문제).png
-!/programmers/javaShcool/티셔츠(문제).png
-!/programmers/javaShcool/상담예약제(문제)1.png
-!/programmers/javaShcool/티셔츠(문제)1.png
+/programmers/javaShcool/상담예약제(문제).png
+/programmers/javaShcool/티셔츠(문제).png
+/programmers/javaShcool/선후수 수강(문제).png
+/programmers/javaShcool/판데믹(문제).png
